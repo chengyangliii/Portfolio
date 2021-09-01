@@ -2,7 +2,7 @@ import React from 'react';
 import ProjectCard from "./ProjectCard";
 import { SectionWrapper } from "../Utilities/SectionWrapper";
 import { Divider } from '@material-ui/core';
-import burgerImage from "../../lcy.jpeg";
+import Image from "../../Online_Exam.png";
 import styled from 'styled-components';
  
 
@@ -17,16 +17,13 @@ export default function Projects() {
     <SectionWrapper title="Projects">
       <PostWrapper>
         <ProjectCard 
-          image={burgerImage}
+          image={Image}
           imgTitle="Exam System Web App" 
           projectName="Exam System Web App"
           intro="Implemented a RESTful backend with Node.js, 
           Express Built frontend with React, React Hooks Managed 
           states with Redux, React-Redux Stored data in MongoBD 
-          Atlas Styled UI by Bootstrap, Materialize, React-Bootstrap 
-          Used PassportJS, Google OAuth for authentication Deployed 
-          on AWS Elastic BeanStalk Configured AWS code pipeline for 
-          continuous integration"
+          Atlas Styled UI by Bootstrap, Materialize, React-Bootstrap."
           websiteLink="#"
           githubLink="#"
         />
