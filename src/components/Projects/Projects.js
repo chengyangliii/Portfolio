@@ -7,7 +7,7 @@ import styled from 'styled-components';
  
 
 const PostWrapper = styled.div `
-  padding-top: 20px;
+  margin: 2em 0 5em 0;
   width: 600px;
   margin-left: calc((100% - 600px) / 2);
 `
@@ -31,9 +31,7 @@ export default function Projects() {
           githubLink="#"
         />
       </PostWrapper>
-
-      <Divider style={{marginTop: "32px"}} />   
-          
+      <Divider/>   
     </SectionWrapper>
   );
 }

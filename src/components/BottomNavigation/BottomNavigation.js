@@ -1,37 +1,30 @@
 import React from 'react';
-import { makeStyles, styled } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import {
-  BottomNavigation,
-  BottomNavigationAction,
   Grid,
-  // Link
+  Typography,
+  Link
 } from '@material-ui/core';
-import EmailIcon from '@material-ui/icons/Email';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import styled from 'styled-components';
+
 
 const useStyles = makeStyles({
-  root: {
-    width: 500,
-    paddingTop: '3em',
-    paddingBottom: '2em'
+  wrapper: {
+    paddingTop: '5em'
   },
-  icon: {
-    fontSize: '100px'
+  item: {
+    margin: '2em 1em 2em 1em',
   }
+
 });
 
-const Icon = styled(BottomNavigationAction)({
-  fontSize: '100px',
-})
+const Footer = styled.footer `
+  display: flex;
+  flex-flow: row nowrap;
+`
 
 export default function LabelBottomNavigation() {
   const classes = useStyles();
-  const [value, setValue] = React.useState('GitHub');
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
 
   return (
     <Grid
@@ -40,15 +33,22 @@ export default function LabelBottomNavigation() {
       justifyContent='center'
       alignItems='center'
     >
-      <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
-       
-        
-        <Icon label="GitHub" value="GitHub" icon={<GitHubIcon />}/>
-        
-        <Icon label="Email" value="Email" icon={<EmailIcon />}/>
-        <Icon label="LinkedIn" value="LinkedIn" icon={<LinkedInIcon />}/>
 
-      </BottomNavigation>
+      <Footer className={classes.root}>
+        
+        <Typography variant='h6' color='secondary' className={classes.item} component={Link} href='mailto: chengyangli723@gmail.com'>
+          Email
+        </Typography>
+
+        <Typography variant='h6' color='secondary' className={classes.item} component={Link} href='https://github.com/chengyangliii'>
+          GitHub
+        </Typography>
+
+        <Typography variant='h6' color='secondary' className={classes.item} component={Link} href='https://www.linkedin.com/in/chengyang-allan-li'>
+          LinkedIn
+        </Typography>
+
+      </Footer>
     </Grid>
   );
 }
