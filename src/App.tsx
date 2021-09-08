@@ -1,5 +1,4 @@
 import React, { useState }  from 'react';
-// import Header from './components/Header/Header';
 import About from './components/About/About';
 import Experience from './components/Experience/Experience';
 import Projects from './components/Projects/Projects';
@@ -21,6 +20,8 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import Brightness2Icon from '@material-ui/icons/Brightness2';
 import { green, yellow, indigo } from '@material-ui/core/colors';
+import Portfolio_Image from "./Portfolio_Image.png";
+import Exam_Image from "./Online_Exam.png";
 
 const Header = styled(AppBar)({
   padding: '16px 0',
@@ -34,7 +35,68 @@ const MyContainer = styled(Container)({
   justifyContent: 'space-between',
 })
 
-export default function App() {
+export interface ExperienceInterface{
+  experience: {
+    position: string
+    period: string
+    company: string
+    academic?: boolean | undefined
+  }[]
+}
+
+export interface projectsInterface {
+  projects: {
+    title: string
+    desc: string
+    image?: string
+    websiteLink?: string
+    githubLink?: string
+  }[]
+}
+
+const App = () => {
+
+  const [experience, setExperience] = useState<ExperienceInterface['experience']>([
+    {
+      position: 'Full Stack Developer',
+      period: 'May 2021 - Aug 2021',
+      company: 'Elections Canada, Gatineau, QC'
+    },
+    {
+      position: 'Web Developer',
+      period: 'Sep 2020 - Dec 2020',
+      company: 'University of Ottawa, Ottawa, ON'
+    },
+    {
+      position: 'Software Developer',
+      period: 'Jan 2020 - Apr 2020',
+      company: 'House of Commons, Ottawa, ON'
+    },
+    {
+      position: 'Computer Science',
+      period: 'Sep 2017 - Dec 2021',
+      company: 'University of Ottawa, Ottawa, ON',
+      academic: true
+    }
+  ])
+
+  const [projects, setProjects] = useState<projectsInterface['projects']>([
+    {
+      image: Portfolio_Image,
+      title: 'Personal Website',
+      desc: 'TypeScript for cenhancing code manageability and catching bugs early at compile time. \n' +
+            'React for component-based, declarative UI development. \n' +
+            'Styled-components for modular, scoped and dynamic CSS styling',
+      githubLink: 'https://github.com/chengyangliii/portfolio/tree/master'
+    },
+    {
+      image: Exam_Image,
+      title: 'Exam System Web App',
+      desc: 'Implemented a RESTful backend with Node.js, Express Built frontend with React, React Hooks Managed states with Redux, React-Redux Stored data in MongoBD Atlas Styled UI by Bootstrap, Materialize, React-Bootstrap.',
+      githubLink: 'https://github.com/chengyangliii/portfolio/tree/master'
+    }
+    
+  ])  
 
   const [darkState, setDarkState] = useState(true);
   const palletType = darkState ? "dark" : "light";
@@ -76,23 +138,24 @@ export default function App() {
   
       body1: {
         fontSize: '16px',
-        fontWeight: '400'
+        fontWeight: 400
       },
       h6: {
         fontSize: '1.25rem',
-        fontWeight: '600'
+        fontWeight: 600
       },
       h5: {
         fontSize: '1.5rem',
-        fontWeight: '700',
+        fontWeight: 700
       },
       h4: {
         fontSize: '2.0rem',
-        fontWeight: '800'
+        fontWeight: 800
+        
       },
       h3: {
         fontSize: '3rem',
-        fontWeight: '900'
+        fontWeight: 900
       },
     },
   })
@@ -116,8 +179,8 @@ export default function App() {
                 </MyContainer>
             </Header>
           <About />
-          <Experience />
-          <Projects />
+          <Experience experience={ experience }/>
+          <Projects projects={ projects }/>
           <BottomNavigation />
         </ThemeProvider>
       </Box>
@@ -125,3 +188,4 @@ export default function App() {
   );
 }
 
+export default App

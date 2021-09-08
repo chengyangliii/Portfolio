@@ -20,7 +20,7 @@ const MyContainer = styled(Container)({
     justifyContent: 'space-between',
 })
 
-export default function HeaderBar() {
+const HeaderBar: React.FC = () => {
   return (
     <>
     
@@ -35,3 +35,5 @@ export default function HeaderBar() {
     </>   
   );
 }
+
+export default HeaderBar

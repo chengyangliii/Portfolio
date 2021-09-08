@@ -23,7 +23,7 @@ const Footer = styled.footer `
   flex-flow: row nowrap;
 `
 
-export default function LabelBottomNavigation() {
+const LabelBottomNavigation: React.FC = () => {
   const classes = useStyles();
 
   return (
@@ -34,7 +34,7 @@ export default function LabelBottomNavigation() {
       alignItems='center'
     >
 
-      <Footer className={classes.root}>
+      <Footer>
         
         <Typography variant='h6' color='secondary' className={classes.item} component={Link} href='mailto: chengyangli723@gmail.com'>
           Email
@@ -52,3 +52,5 @@ export default function LabelBottomNavigation() {
     </Grid>
   );
 }
+
+export default LabelBottomNavigation
