@@ -93,7 +93,7 @@ const App = () => {
       image: Exam_Image,
       title: 'Exam System Web App',
       desc: 'Implemented a RESTful backend with Node.js, Express Built frontend with React, React Hooks Managed states with Redux, React-Redux Stored data in MongoBD Atlas Styled UI by Bootstrap, Materialize, React-Bootstrap.',
-      githubLink: 'https://github.com/chengyangliii/portfolio/tree/master'
+      githubLink: 'https://github.com/chengyangliii/MERN-Web-App'
     }
     
   ])  
