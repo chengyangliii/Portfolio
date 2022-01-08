@@ -22,6 +22,7 @@ import Brightness2Icon from '@material-ui/icons/Brightness2';
 import { green, yellow, indigo } from '@material-ui/core/colors';
 import Portfolio_Image from "./Portfolio_Image.png";
 import Exam_Image from "./Online_Exam.png";
+import Flask_Image from "./Flask_Image.png";
 
 const Header = styled(AppBar)({
   padding: '16px 0',
@@ -75,7 +76,7 @@ const App = () => {
     {
       position: 'Computer Science',
       period: 'Sep 2017 - Dec 2021',
-      company: 'University of Ottawa, Ottawa, ON',
+      company: 'University of Ottawa, ON, Canada',
       academic: true
     }
   ])
@@ -92,9 +93,17 @@ const App = () => {
     {
       image: Exam_Image,
       title: 'Exam System Web App',
-      desc: 'Implemented a RESTful backend with Node.js, Express Built frontend with React, React Hooks Managed states with Redux, React-Redux Stored data in MongoBD Atlas Styled UI by Bootstrap, Materialize, React-Bootstrap.',
+      desc: 'Implemented a Node, Express backend, created RESTful APIs to manipulate data in MongoDB. \n' +
+      'Built frontend with React, and Redux to manage states. Implemented Passport.JS to store authenticated requests.',
       githubLink: 'https://github.com/chengyangliii/MERN-Web-App'
-    }
+    },
+    {
+      image: Flask_Image,
+      title: 'Flask Image Web App',
+      desc: 'Implemented a RESTful backend with Python, Flask, which served 40k images with no downtime. \n' +
+      'Developed a page application with Angular to allow users to manage images and visualize the results of the re-identification algorithm (series of small images).',
+      githubLink: 'https://github.com/chengyangliii/Flask/tree/master'
+    },
     
   ])  
 

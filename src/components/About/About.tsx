@@ -48,9 +48,9 @@ const About: React.FC = () => {
             <Slide direction='up' in={true} mountOnEnter unmountOnExit>
                 <Grid item xl={3} lg={4} md={4} sm={12}>
                     <Introduction color='secondary'>
-                        I am <strong>Chengyang Li</strong>,<br/>
-                        a fouth year computer science student <br/>
-                        and a full-stack developer.
+                        I am <strong>Chengyang</strong>,<br/>
+                        a <strong>full stack</strong> developer <br/>
+                        with a lot of hobbies
                         <br/>
                         <Link href="https://github.com/chengyangliii">
                             <GithubIcon color='primary'/>
