@@ -60,17 +60,17 @@ const App = () => {
     {
       position: 'Full Stack Developer',
       period: 'May 2021 - Aug 2021',
-      company: 'Elections Canada, Gatineau, QC'
+      company: 'Elections Canada, QC, Canada'
     },
     {
-      position: 'Web Developer',
+      position: 'Full Stack Developer',
       period: 'Sep 2020 - Dec 2020',
-      company: 'University of Ottawa, Ottawa, ON'
+      company: 'University of Ottawa, ON, Canada'
     },
     {
       position: 'Software Developer',
       period: 'Jan 2020 - Apr 2020',
-      company: 'House of Commons, Ottawa, ON'
+      company: 'House of Commons, ON, Canada'
     },
     {
       position: 'Computer Science',
